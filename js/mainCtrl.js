@@ -10,16 +10,16 @@ angular.module('myCalculator')
         $scope.currentHours = 4;
         $scope.totalDays = 365;
 
-        $scope.incConversion = .0625;
-        $scope.halConversion = .0450;
-        $scope.cflConversion = .0146;
-        $scope.ledConversion = .0125;
+        const incConversion = .0625;
+        const halConversion = .0450;
+        const cflConversion = .0146;
+        const ledConversion = .0125;
 
-        $scope.calculate = function() {
-            $scope.incWattage = ($scope.current_lumens * $scope.incConversion).toFixed(1);
-            $scope.halWattage = ($scope.current_lumens * $scope.halConversion).toFixed(1);
-            $scope.cflWattage = ($scope.current_lumens * $scope.cflConversion).toFixed(1);
-            $scope.ledWattage = ($scope.current_lumens * $scope.ledConversion).toFixed(1);
+        $scope.calculate = () => {
+            $scope.incWattage = ($scope.current_lumens * incConversion).toFixed(1);
+            $scope.halWattage = ($scope.current_lumens * halConversion).toFixed(1);
+            $scope.cflWattage = ($scope.current_lumens * cflConversion).toFixed(1);
+            $scope.ledWattage = ($scope.current_lumens * ledConversion).toFixed(1);
 
             if ($scope.currentHours > 24) {
                 $scope.currentHours = 24;
@@ -44,7 +44,4 @@ angular.module('myCalculator')
 
 
 
-
-
-
-});
+    });

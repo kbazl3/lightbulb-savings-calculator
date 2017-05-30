@@ -2,7 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700|Open+Sans+Condensed:700);
 #myCalculator {
-    margin: 0;
+    margin: auto;
     padding: 0;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
@@ -13,6 +13,14 @@
 
 #myCalculator main {
     background-color: #444
+}
+
+#myCalculator h1 {
+    text-align: center;
+}
+
+#dollar_sign {
+    color: green
 }
 
 #myCalculator main section {
@@ -195,29 +203,6 @@
         font-size: .8em;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*

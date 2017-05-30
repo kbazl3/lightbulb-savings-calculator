@@ -1,68 +1,74 @@
 <!DOCTYPE HTML>
 <html ng-app="myCalculator">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/assets/calculator.css">
-		<title>Calculator</title>
-	</head>
-	<body ng-controller="mainCtrl">
 
-		<div id="myCalculator">
-			<main>
-				<section class="inc">
-					<div class="">
-						<h4>Incondescent</h4>
-						<p>{{incWattage}}</p>
-						<p>{{incCost}}</p>
-					</div>
-				</section>
-				<section class="hal">
-					<div class="">
-						<h4>Halogen</h4>
-						<p>{{halWattage}}</p>
-						<p>{{halCost}}</p>
-					</div>
-				</section>
-				<section class="cfl">
-					<div class="">
-						<h4>CFL</h4>
-						<p>{{cflWattage}}</p>
-						<p>{{cflCost}}</p>
-					</div>
-				</section>
-				<section class="led">
-					<div class="">
-						<h4>LED</h4>
-						<p>{{ledWattage}}</p>
-						<p>{{ledCost}}</p>
-					</div>
-				</section>
-			</main>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/calculator.css">
+	<title>Light Bulb Savings Calculator</title>
+</head>
 
-			<form action="">
-				<div>
-					<h4>Lumens</h4>
-					<p>Brightness <br>of Bulb</p>
-					<select ng-model="current_lumens" ng-options="o as o for o in lumen_options" ng-change="calculate()">
+<body ng-controller="mainCtrl">
+
+
+
+	<div id="myCalculator">
+			<h1>Light Bulb <span id="dollar_sign">$</span>avings Calculator</h1>
+		<main>
+			<section class="inc">
+				<div class="">
+					<h4>Incondescent</h4>
+					<p>{{incWattage}}</p>
+					<p>{{incCost}}</p>
+				</div>
+			</section>
+			<section class="hal">
+				<div class="">
+					<h4>Halogen</h4>
+					<p>{{halWattage}}</p>
+					<p>{{halCost}}</p>
+				</div>
+			</section>
+			<section class="cfl">
+				<div class="">
+					<h4>CFL</h4>
+					<p>{{cflWattage}}</p>
+					<p>{{cflCost}}</p>
+				</div>
+			</section>
+			<section class="led">
+				<div class="">
+					<h4>LED</h4>
+					<p>{{ledWattage}}</p>
+					<p>{{ledCost}}</p>
+				</div>
+			</section>
+		</main>
+
+		<form action="">
+			<div>
+				<h4>Lumens</h4>
+				<p>Brightness <br>of Bulb</p>
+				<select ng-model="current_lumens" ng-options="o as o for o in lumen_options" ng-change="calculate()">
 					</select>
-				</div>
-				<div>
-					<h4>kWh</h4>
-					<p>Kilowatt-<br>hour cost</p>
-					<input ng-change="calculate()" type="number" ng-model="currentCost" value={{currentCost}}> cents
-				</div>
-				<div>
-					<h4>hours</h4>
-					<p>Usage <br>Per Day</p>
-					<input ng-change="calculate()" type="number" ng-model="currentHours" value={{currentHours}}>
-				</div>
-			</form>
+			</div>
+			<div>
+				<h4>kWh</h4>
+				<p>Kilowatt-<br>hour cost</p>
+				<input ng-change="calculate()" type="number" ng-model="currentCost" value={{currentCost}}> cents
+			</div>
+			<div>
+				<h4>hours</h4>
+				<p>Usage <br>Per Day</p>
+				<input ng-change="calculate()" type="number" ng-model="currentHours" value={{currentHours}}>
+			</div>
+		</form>
 
-		</div>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js" charset="utf-8"></script>
-	<script src="/assets/app.js" charset="utf-8"></script>
-	<script src="/assets/mainCtrl.js" charset="utf-8"></script>
-	</body>
+	<script src="/js/app.js" charset="utf-8"></script>
+	<script src="/js/mainCtrl.js" charset="utf-8"></script>
+</body>
+
 </html>
