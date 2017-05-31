@@ -3,12 +3,11 @@ angular.module('myCalculator')
 
 
 
-        $scope.lumen_options = [375, 600, 900, 1125, 1600];
-        $scope.current_lumens = 600;
+        $scope.lumen_options = [375, 600, 900, 1125, 1600]; //populate the <options> tag
+        $scope.current_lumens = 600; //default value
 
-        $scope.currentCost = 13;
+        $scope.currentCost = 13; //default value
         $scope.currentHours = 4;
-        $scope.totalDays = 365;
 
         const incConversion = .0625;
         const halConversion = .0450;
@@ -25,7 +24,7 @@ angular.module('myCalculator')
                 $scope.currentHours = 24;
             }
 
-            let totalHours = $scope.totalDays * $scope.currentHours;
+            let totalHours = 365 * $scope.currentHours;
             let cost = $scope.currentCost / 100;
 
             $scope.incCost = ((($scope.incWattage * totalHours) / 1000) * cost).toFixed(2);
@@ -35,12 +34,6 @@ angular.module('myCalculator')
         };
 
         $scope.calculate();
-
-
-
-
-
-
 
 
 
