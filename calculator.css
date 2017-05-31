@@ -145,14 +145,14 @@
 
 #myCalculator form select {
     font-size: 1em;
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
+    -o-appearance: none;*/
+    /*appearance: none;
     background: #fff url(images/icons_arrows.svg) no-repeat right 6px;
     background-size: 30px 20px;
-    padding 3px 30px 3px 5px;
+    /*padding 3px 30px 3px 5px;*/
 }
 
 #myCalculator form select::-ms-expand {
@@ -203,7 +203,3 @@
         font-size: .8em;
     }
 }
-
-
-/*
-asdfads*/
