@@ -150,10 +150,12 @@
     -ms-appearance: none;
     -o-appearance: none;*/
     /*appearance: none;
-    background: #fff url(images/icons_arrows.svg) no-repeat right 6px;
+    /*background: #fff url(images/icons_arrows.svg) no-repeat right 6px;*/
     background-size: 30px 20px;
-    /*padding 3px 30px 3px 5px;*/
+    padding 3px 30px 3px 5px;
+
 }
+
 
 #myCalculator form select::-ms-expand {
     display: none;
